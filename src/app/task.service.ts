@@ -18,7 +18,7 @@ export class TaskService {
 
   addTask(task:taskInterface){
     const updatedTasks = [...this.tasksSubject.value, task]
-    console.log(updatedTasks)
+    // console.log(updatedTasks)
     this.tasksSubject.next(updatedTasks)
   }
 
