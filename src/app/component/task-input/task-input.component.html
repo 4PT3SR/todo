@@ -1,0 +1,5 @@
+<form [formGroup]="addTaskForm" (submit)="addTask()" class="flex gap-2 items-end justify-center">
+
+    <input formControlName="addTask" type="text" placeholder="Add Task" class="outline-none font-mono border-b-[1px] border-black px-4 py-2 bg-transparent h-fit w-full" />
+    <button type="submit" class="bg-[#8ab6eb]  text-white px-3 py-2 rounded-sm font-mono h-fit min-w-24">Add Task</button>
+</form>

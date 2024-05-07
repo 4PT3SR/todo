@@ -1,0 +1,6 @@
+.icon {
+    background-color:#f0f1f2 ;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}

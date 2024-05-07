@@ -1,0 +1,22 @@
+<div class="flex justify-between gap-x-2 items-center bg-white p-3">
+    <p class="cursor-pointer flex-grow overflow-x-scroll no-scrollbar outline-none" [ngStyle]="{'text-decoration': task.completed? 'line-through':''}" (click)="handleClick()" [attr.contenteditable]="isEditable" (input)="onEdit($event)" #inputField>{{task.task}}</p>
+    <!-- @if(isEditable) {
+        <p class="cursor-pointer flex-grow overflow-x-scroll no-scrollbar" [ngStyle]="{'text-decoration': task.completed? 'line-through':''}" (click)="toggleCompleted()">{{task.task}}</p>
+
+    } @else {
+        <form>
+            <input type="text"/>
+        </form>
+    } -->
+    <div class="flex gap-x-1">
+        @if(isEditable){
+
+            <app-button icon="check" (clicked)="onEditComplete()"/>
+        } @else {
+
+            <app-button icon="edit_note" (clicked)="toggleEditable()"/>
+        }
+        <app-button icon="delete_outline" (clicked)="deleteTask()"/>
+
+    </div>
+</div>
