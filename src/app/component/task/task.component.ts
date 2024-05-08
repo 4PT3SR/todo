@@ -34,8 +34,10 @@ export class TaskComponent {
   // }
   
   onEditComplete() {
-    this.toggleEditable()
-    this.taskService.editTask(this.task.id, this.edittedTaskContent)
+    if(this.edittedTaskContent.trim().length > 0) {
+      this.toggleEditable()
+      this.taskService.editTask(this.task.id, this.edittedTaskContent)
+    }
   }
   
   onEdit(event:any) {

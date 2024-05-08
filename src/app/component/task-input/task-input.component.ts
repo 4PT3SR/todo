@@ -25,7 +25,7 @@ export class TaskInputComponent {
   
   addTask(){
     const task = this.addTaskForm.get('addTask')!.value
-    if(task?.length > 0) {
+    if(task?.trim()?.length > 0) {
       this.taskService.addTask({id:nanoid(),task:task, completed: false})
       this.addTaskForm.get('addTask')?.reset();
       
